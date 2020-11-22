@@ -12808,6 +12808,7 @@ a.hamburger-menu {
 
 @media (min-width: 992px) {
   .login {
+    margin-bottom: auto;
     min-height: calc(100vh - 216px);
   }
 }
