@@ -2,7 +2,6 @@
 .login{
     margin-bottom: $spacer * 6.625; //106px
     @include media-breakpoint-up(lg){
-        margin-bottom: auto;
         min-height: calc(100vh - 216px);
     }
 }
