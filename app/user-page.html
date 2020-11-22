@@ -1,0 +1,222 @@
+---
+title: 會員管理頁
+layout: ./app/layout.ejs
+engine: ejs
+current: index
+---
+<!-- 產品品牌 navbar -->
+<nav class="navbar navbar-product bg-primary d-none d-md-block">
+    <ul class="container d-flex fz-lg">
+        <li><a href="#">CHANEL</a></li>
+        <li><a href="#">Jo Malone</a></li>
+        <li><a href="#">Curology</a></li>
+        <li><a href="#">Dior</a></li>
+        <li><a href="#">Chloe</a></li>
+        <li><a href="#">ZARA</a></li>
+    </ul>
+</nav>
+<!-- 會員資料管理 -->
+<section class="container pt-7 pt-lg-10">
+    <div class="row mb-7">
+        <!-- navbar 會員資料 / 訂單 / 退換貨 -->
+        <div class="col-12 col-lg-2">
+            <h2 class="d-none d-lg-block text-gray-500 fz-lg mb-5">會員中心</h2>
+            <ul class="d-flex justify-content-between d-lg-block mb-7 mb-lg-0">
+                <li class="mb-lg-5"><a href="#" class="user-nav-link">會員資料修改</a></li>
+                <li class="mb-lg-5"><a href="#" class="user-nav-link">訂單查詢</a></li>
+                <li><a href="#" class="user-nav-link">退／換貨申請</a></li>
+            </ul>
+        </div>
+        <!-- 會員編碼 -->
+        <div class="col-12 col-lg-4 order-lg-last text-gray-500 mb-7">
+            <h3 class="h6 d-flex align-items-center">
+                <i class="fas fa-user text-dark mr-1"></i>
+                會員編碼
+                <span class="fz-lg text-gray-600 ml-1">T00020080615</span>
+            </h3>
+            <ul>
+                <li class="row no-gutters mb-3">
+                    <span class="col-4 col-lg-6">購物車</span>
+                    <span class="col-8 col-lg-6">56</span>
+                </li>
+                <li class="row no-gutters mb-3">
+                    <span class="col-4 col-lg-6">我的收藏</span>
+                    <span class="col-8 col-lg-6">23</span>
+                </li>
+                <li class="row no-gutters mb-3">
+                    <span class="col-4 col-lg-6">已完成訂單</span>
+                    <span class="col-8 col-lg-6">8</span>
+                </li>
+                <li class="row no-gutters mb-3">
+                    <span class="col-4 col-lg-6">會員紅利</span>
+                    <span class="col-8 col-lg-6">2680</span>
+                </li>
+                <li class="row no-gutters">
+                    <span class="col-4 col-lg-6">專屬邀請碼</span>
+                    <span class="col-8 col-lg-6">TK2075</span>
+                </li>
+            </ul>
+            <div class="text-gray-400 fz-sm">新戶輸入邀請碼即可獲贈紅利點數1000點</div>
+        </div>
+        <!-- 個人資料 / 密碼 -->
+        <form class="col-12 col-lg-6">
+            <!-- 個人資料修改 -->
+            <h2 class="h6 text-dark user-form-title pb-2 mb-3">個人資料修改</h2>
+            <!-- 帳號 -->
+            <div class="row no-gutters text-gray-500 mb-4">
+                <label for="accountNumber" class="col-3 col-lg-2 col-form-label">Email</label>
+                <div class="col-9">
+                    <input type="text" readonly class="form-control-plaintext text-gray-500" id="accountNumber" value="email@example.com">
+                </div>
+            </div>
+            <!-- 姓名 -->
+            <div class="row no-gutters text-gray-500 align-items-center mb-4">
+                <label for="name" class="col-3 col-lg-2 col-form-label">會員姓名</label>
+                <div class="col-9">
+                    <input type="text" class="text-gray-500 w-100 user-input-border py-1" id="name">
+                </div>
+            </div>
+            <!-- 性別 -->
+            <div class="row no-gutters text-gray-500 align-items-center mb-4">
+                <label for="gender" class="col-3 col-lg-2 col-form-label">會員性別</label>
+                <div class="col-9">
+                    <select id="gender" class="user-custom-select text-gray-500 py-2 pl-3 pr-5 user-input-border">
+                        <option selected>女</option>
+                        <option>男</option>
+                    </select>
+                </div>
+            </div>
+            <!-- 電子信箱 -->
+            <div class="row no-gutters text-gray-500 align-items-center mb-4">
+                <label for="email"" class="col-3 col-lg-2 col-form-label">Email</label>
+                <div class="col-9">
+                    <input type="email" class="text-gray-500 w-100 user-input-border px-2 py-1" id="email" placeholder="email@example.com">
+                </div>
+            </div>
+            <!-- 手機號碼 -->
+            <div class="row no-gutters text-gray-500 align-items-center mb-4">
+                <label for="phone-number" class="col-3 col-lg-2 col-form-label">手機號碼</label>
+                <div class="col-9">
+                    <input type="tel" class="text-gray-500 w-100 user-input-border px-2 py-1" id="phone-number">
+                </div>
+            </div>
+            <!-- 聯絡地址 -->
+            <div class="row no-gutters text-gray-500">
+                <label for="address" class="col-3 col-lg-2 col-form-label">聯絡地址</label>
+                <div class="col-9">
+                    <div class="row no-gutters mb-2">
+                        <!-- 台灣及離島 -->
+                        <div class="col-9">
+                            <select class="user-custom-select text-gray-500 w-100 user-input-border px-1 py-1">
+                                <option selected>台灣及離島</option>
+                                <option>本島</option>
+                                <option>離島</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- 縣市 / 區 -->
+                    <div class="row no-gutters mb-2">
+                        <div class="col-4 mr-2">
+                            <select  class="user-custom-select text-gray-500 w-100 user-input-border px-1 py-1">
+                                <option selected>高雄市</option>
+                                <option>台南市</option>
+                                <option>屏東縣</option>
+                                <option>屏東市</option>
+                            </select>
+                        </div>
+                        <div class="col-4">
+                            <select  class="user-custom-select text-gray-500 w-100 user-input-border px-1 py-1">
+                                <option selected>鹽埕區</option>
+                                <option>鳳山區</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- 地址 -->
+                    <div class="row mb-2">
+                        <div class="col-12">
+                            <input id="address" type="text" class="text-gray-500 w-100 user-input-border px-2 py-1" placeholder="請輸入地址">
+                        </div>
+                    </div>
+                    <!-- checkbox -->
+                    <div class="row no-gutters mb-4">
+                        <label class="col-12 label-container pl-4" for="checkbox">
+                            <input id="checkbox" type="checkbox" class="text-gray-500 w-100 user-input-border pr-2 pl-4 py-1">
+                            我願意收到最新優惠情報
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <!-- 配送地址 -->
+            <div class="row no-gutters text-gray-500 mb-8">
+                <label for="address" class="col-3 col-lg-2 col-form-label">配送地址</label>
+                <div class="col-9">
+                    <div class="row no-gutters mb-2">
+                        <!-- 台灣及離島 -->
+                        <div class="col-8">
+                            <select class="user-custom-select text-gray-500 w-100 user-input-border px-1 py-1">
+                                <option selected>台灣及離島</option>
+                                <option>本島</option>
+                                <option>離島</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- 縣市 / 區 -->
+                    <div class="row no-gutters mb-2">
+                        <div class="col-4 mr-2">
+                            <select  class="user-custom-select text-gray-500 w-100 user-input-border px-1 py-1">
+                                <option selected>高雄市</option>
+                                <option>台南市</option>
+                                <option>屏東縣</option>
+                                <option>屏東市</option>
+                            </select>
+                        </div>
+                        <div class="col-4">
+                            <select  class="user-custom-select text-gray-500 w-100 user-input-border px-1 py-1">
+                                <option selected>鹽埕區</option>
+                                <option>鳳山區</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- 地址 -->
+                    <div class="row mb-2">
+                        <div class="col-12">
+                            <input id="address" type="text" class="text-gray-500 w-100 user-input-border px-2 py-1 mb-3" placeholder="請輸入地址">
+                            <!-- 確認修改 -->
+                            <div class="text-gray-500 justify-content-center">
+                                <input type="submit" value="確定修改" class="w-submit btn btn-primary text-white">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 修改密碼 -->
+            <h2 class="h6 text-dark user-form-title pb-2 mb-3">修改密碼</h2>
+            <!-- 舊密碼 -->
+            <div class="row no-gutters text-gray-500 align-items-center mb-4">
+                <label for="previous-password" class="col-3 col-lg-2 col-form-label">舊密碼</label>
+                <div class="col-9">
+                    <input type="password"" class="text-gray-500 w-100 user-input-border px-2 py-1" id="previous-password">
+                </div>
+            </div>
+            <!-- 新密碼 -->
+            <div class="row no-gutters text-gray-500 align-items-center  mb-4">
+                <label for="new-password" class="col-3 col-lg-2 col-form-label">新密碼</label>
+                <div class="col-9">
+                    <input type="password"" class="text-gray-500 w-100 user-input-border px-2 py-1" id="new-password">
+                </div>
+            </div>  
+            <!-- 確認新密碼 -->
+            <div class="row no-gutters text-gray-500">
+                <label for="confirmed-password" class="col-3 col-lg-2 col-form-label">確認密碼</label>
+                <div class="col-9">
+                    <input type="password"" class="text-gray-500 w-100 user-input-border px-2 py-1 mb-3" id="confirmed-password">
+                    <!-- 變更密碼 -->
+                    <div class="text-gray-500 justify-content-center">
+                        <input type="submit" value="變更密碼" class="w-submit btn btn-primary text-white">
+                    </div>
+                </div>
+            </div>  
+        </form>
+    </div>
+</section>

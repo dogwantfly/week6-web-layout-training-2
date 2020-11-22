@@ -1,0 +1,31 @@
+.fz-lg{
+    font-size: $font-size-lg;
+}
+.fz-sm{
+    font-size: $font-size-sm;
+}
+.white-space-preline{
+    white-space: pre-line;
+}
+.white-space-xl-preline{
+    @include media-breakpoint-up(xl){
+        white-space: pre-line;
+    }
+}
+.bg-gray-300{
+    background-color:$gray-300;
+}
+.text-gray-400{
+    color: $gray-400;
+}
+.text-gray-500{
+    color: $gray-500;
+}
+.text-gray-600{
+    color: $gray-600;
+}
+.bg-cover{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

@@ -1,0 +1,83 @@
+---
+title: 產品內頁
+layout: ./app/layout.ejs
+engine: ejs
+current: index
+---
+<section class="container py-7 pt-lg-10 pb-lg-9">
+    <div class="row flex-lg-row-reverse">
+        <!-- 有文字的區塊 -->
+        <div class="product-info col-12 col-lg-4">
+            <img src="./assets/images/product-detail-mobile.png" alt="" class="w-100 product-info-img d-lg-none"> 
+            <h2>
+                CHANEL N°5
+            </h2>
+            <p class="mb-5">
+                N°5，女性魅力的極致精髓。散發柔美澄透的乙醛花束香氣。經典傳奇香氛，蘊藏於極簡設計的獨特瓶身。
+            </p>
+            <div class="product-info-text">
+                NT$4,980
+            </div>
+            <div class="input-group mb-1">
+                <input type="number" class="form-control py-5" placeholder="1" aria-label="amount of product" aria-describedby="basic-addon2">
+                <div class="input-group-append input-group-append-product-info">
+                    <a href="#" class="d-block input-group-text input-group-text-product-info w-100" id="basic-addon2" data-toggle="modal" data-target="#shoppingCartModal">加入購物車</a>
+                </div>
+            </div>
+
+            <div class="product-info-favorate mb-6 mb-lg-9" data-toggle="modal" data-target="#favorateModal">
+                <a href="#" class="fas fa-heart mr-1" ></a>
+                加入我的收藏
+            </div>
+            <h3 class="h6">商品購買須知</h3>
+            <p>
+                產品因拍攝關係顏色可能略有差異，實際以廠商出貨為主。 商品情境照為示意用，僅商品主體不包含其他配件，請以規格內容物為主。 D’Perfume 盡可能確保所列商品備貨充足，但偶爾仍會有產品售罄的情況。如您所訂購的商品庫存不足，我們將盡快以電子郵件通知您。任何訂單變動均會在訂單總額與出貨訊息內更新。
+            </p>
+            <h3 class="h6">退換貨須知</h3>
+            <p>
+                依《消費者保護法》的規定，於全站購物皆享有商品到貨【七日猶豫期】（含例假日）之權益。若收到的商品有任何問題，可於猶豫期內申請退貨。
+            </p>
+        </div>
+        <!-- 圖片 -->
+        <div class="col-12 col-lg-8">
+            <div class="row">
+                <div class="col-12 mb-lg-6">
+                    <img src="./assets/images/product-img-1.png" alt="" class="d-none d-lg-block w-100">
+                </div>
+                <div class="col-12 col-md-6 mb-3 mb-lg-6">
+                    <img src="./assets/images/product-img-2.png" alt="">
+                </div>
+                <div class="col12 col-md-6 mb-3">
+                    <img src="./assets/images/product-img-3.png" alt="">
+                </div>
+                <div class="col-12">
+                    <img src="./assets/images/product-img-mobile.png" alt="" class="d-md-none">
+                </div>
+                <div class="col-12">
+                    <img src="./assets/images/product-img-1.png" alt="" class="d-none d-md-block w-100">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <!-- Modal favorate-->
+  <div class="modal fade show" id="favorateModal" tabindex="-1" role="dialog" aria-labelledby="favorateModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-product" role="document">
+      <div class="modal-content">
+        <div class="modal-body text-primary fz-lg font-weight-bold">
+            已加入我的收藏
+        </div>
+      </div>
+    </div>
+</div>
+  <!-- Modal shopping-cart-->
+  <div class="modal fade show" id="shoppingCartModal" tabindex="-1" role="dialog" aria-labelledby="shoppingCartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-product" role="document">
+      <div class="modal-content">
+        <div class="modal-body text-primary fz-lg font-weight-bold">
+          已加入購物車
+        </div>
+      </div>
+    </div>
+</div>

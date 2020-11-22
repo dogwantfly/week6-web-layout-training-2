@@ -1,0 +1,49 @@
+---
+title: 登入頁
+layout: ./app/layout.ejs
+engine: ejs
+current: index
+---
+<!-- 產品品牌 navbar -->
+<nav class="navbar navbar-product bg-primary d-none d-md-block">
+    <ul class="container d-flex fz-lg">
+        <li><a href="#">CHANEL</a></li>
+        <li><a href="#">Jo Malone</a></li>
+        <li><a href="#">Curology</a></li>
+        <li><a href="#">Dior</a></li>
+        <li><a href="#">Chloe</a></li>
+        <li><a href="#">ZARA</a></li>
+    </ul>
+</nav>
+<!-- login -->
+<section class="login container pt-7 pt-md-10">
+    <div class="row">
+        <!-- 圖 -->
+        <div class="col-12 col-lg-8 mb-5">
+            <img src="./assets/images/login.png" alt="" class="login-img">
+        </div>
+        <!-- 登入 -->
+        <div class="col-12 col-lg-4 d-flex flex-column justify-content-center">
+            <h2>Log in</h2>
+            <form>
+                <!-- Email 帳號 -->
+                <div class="form-group">
+                  <label for="email">帳號</label>
+                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="email@example.com">
+                </div>
+                <!-- 密碼 -->
+                <div class="form-group">
+                  <label for="password">密碼</label>
+                  <input type="password" class="form-control" id="password" placeholder="Password">
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <a href="#" class="text-primary">忘記密碼</a>
+                    <div>   
+                        <a href="user-page.html" class="btn btn-outline-primary">註冊</a>
+                        <a href="my-page.html" class="btn btn-primary">登入</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,79 @@
+// 產品品牌 navbar
+.navbar-product{
+    .container{
+        justify-content: flex-start;
+    }
+    li:not(:last-child){
+        margin-right: $spacer * 1.75;
+    }
+    a{
+        color: $white;
+        &:hover{
+            color: $gray-300;
+        }
+    }
+}
+// 產品列表
+.product{
+    padding-top: $spacer * 2.265;
+    &-item{
+        margin-bottom: $spacer * 2;
+        @include media-breakpoint-up(lg){
+            margin-bottom: $spacer * 3.625;
+        }
+    }
+    &-img{
+        margin-bottom: $spacer * 0.125;
+    }
+    &-name{
+        font-size: $font-size-lg;
+        margin-bottom: $spacer * 0.125;
+        @include media-breakpoint-up(md){
+            font-size: $h4-font-size;
+        }
+    }
+    &-brand{
+        font-size: $font-size-base;
+        font-weight: $font-weight-light;
+    }
+    .fas{
+        font-size: 18px;
+        color: $primary;
+        &:hover{
+            color: lighten($primary,10%);
+        }
+    }
+    @media (min-width: 375px){
+        .price{
+            display: flex;
+        }
+    }
+}
+
+// 分頁
+.pagination {
+    a{
+        color: $black;
+        padding: $spacer * 0.625;
+        &:hover{
+            text-decoration: underline;
+            color: $primary;
+        }
+    }
+}
+// model
+.modal{
+    .modal-dialog.modal-dialog-product{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: fit-content;
+        margin: 0;
+    }
+    .modal-body{
+        @include media-breakpoint-up(md){
+            padding: 1rem 175px;
+        }
+    }
+}

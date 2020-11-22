@@ -1,0 +1,29 @@
+// 文字區塊
+.product-info{
+    &-img{
+        margin-bottom: $spacer * 1.75;
+    }
+    &-text{
+        margin-bottom: $spacer * 0.75;
+    }
+    .fas{
+        font-size: 18px;
+        color: $primary;
+        &:hover{
+            color: lighten($primary,10%);
+        }
+    }
+}
+.input-group-append-product-info{
+    width: 55%;
+}
+.input-group-text-product-info{
+    padding:  $spacer * 0.75;
+    &:hover{
+        background-color: darken($primary,10%);
+        color: $white;
+    }
+}
+.product-info-favorate{
+    cursor: pointer;
+}
