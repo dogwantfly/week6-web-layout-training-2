@@ -34,7 +34,7 @@
         <li>
           <a href="login.html" class="menu-item py-3 ml-sm-6">
             <i class="fas fa-user"></i>
-            log in
+             log in 
           </a>
         </li>
         <li>
@@ -53,7 +53,7 @@
 
   
 <!--banner -->
-<section class="banner mb-6 bg-cover">
+<header class="banner mb-6 bg-cover">
   <div class="container h-100">
     <div class="row h-100 d-flex justify-content-center justify-content-md-end align-items-center">
       <div class="col col-lg-5 text-white">
@@ -67,7 +67,7 @@
       </div>
     </div>
   </div>
-</section>
+</header>
 <!-- 產品介紹 / 說明-->
 <section class="mb-8">
   <!-- 產品介紹 -->
@@ -191,24 +191,26 @@
 <section class="bg-gray-300 mb-8 pt-6">
   <div class="container">
     <ul class="row">
-      <li class="col mb-5 col-md-6 col-lg-4">
+      <!-- 產品 -->
+      <li class="card mb-5 col-md-6 col-lg-4">
         <a href="#" class="d-block text-dark">
           <img src="./assets/images/product-sale-1.png" alt="" class="mb-1">
-          <h3>
+          <h3 class="card-title">
             Poppy & Barley
           </h3>
-          <h4 class="h6">
+          <h4 class="h6 card-subtitle">
             Jo Malone
           </h4>
-          <span class="discounted-price mr-1">
+          <span class="mr-1 card-text">
             NT$1,380
           </span>
-          <span class="origin-price text-gray-600">
+          <del class="text-gray-600 card-text">
             NT$1,580
-          </span>
+          </del>
         </a>
       </li>
-      <li class="col-12 mb-5 col-md-6 col-lg-4">
+      <!-- 產品 -->
+      <li class="card mb-5 col-md-6 col-lg-4">
         <a href="#" class="d-block text-dark">
           <img src="./assets/images/product-sale-2.png" alt="" class="mb-1">
           <h3>
@@ -222,7 +224,8 @@
           </span>
         </a>
       </li>
-      <li class="col mb-5 col-md-6 col-lg-4 mb-lg-6">
+      <!-- 產品 -->
+      <li class="card mb-5 col-md-6 col-lg-4 mb-lg-6">
         <a href="#" class="d-block text-dark">
           <div class="sold-out mb-1">
             <img src="./assets/images/product-sale-3.png" alt="" >
@@ -251,9 +254,9 @@
           <span class="discounted-price mr-1">
             NT$1,380
           </span>
-          <span class="origin-price text-gray-600">
+          <del class="text-gray-600">
             NT$1,580
-          </span>
+          </del>
         </a>
       </li>
   </ul>
@@ -291,11 +294,11 @@
   <div class="container h-100 d-flex flex-column justify-content-end">
     <div class="row">
       <div class="col col-md-8 col-lg-6 col-xl-4">
-        <h2 class="text-gray-600 mb-4">
+        <label for="subscription" class="h2 text-gray-600 mb-4">
           記得 <br> 訂閱以獲取更多資訊！
-        </h2>
+        </label>
         <div class="input-group mb-3">
-          <input type="email" class="form-control input-subscription" placeholder="Your email address" aria-label="Your email address" aria-describedby="basic-addon2">
+          <input id="subscription" type="email" class="form-control input-subscription" placeholder="Your email address" aria-label="Your email address" aria-describedby="basic-addon2">
           <div class="input-group-append input-group-append-subscription">
             <a href="#" class="d-block input-group-text input-group-text-subscription" id="basic-addon2">Subscribe</a>
           </div>
