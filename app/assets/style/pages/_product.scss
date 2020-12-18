@@ -16,26 +16,6 @@
 // 產品列表
 .product{
     padding-top: $spacer * 2.265;
-    &-item{
-        margin-bottom: $spacer * 2;
-        @include media-breakpoint-up(lg){
-            margin-bottom: $spacer * 3.625;
-        }
-    }
-    &-img{
-        margin-bottom: $spacer * 0.125;
-    }
-    &-name{
-        font-size: $font-size-lg;
-        margin-bottom: $spacer * 0.125;
-        @include media-breakpoint-up(md){
-            font-size: $h4-font-size;
-        }
-    }
-    &-brand{
-        font-size: $font-size-base;
-        font-weight: $font-weight-light;
-    }
     .fas{
         font-size: 18px;
         color: $primary;
@@ -43,23 +23,46 @@
             color: lighten($primary,10%);
         }
     }
-    @media (min-width: 375px){
-        .price{
-            display: flex;
+}
+.card{
+    &-img-product{
+        margin-bottom: $spacer * 0.125;
+    }
+    &-product{
+        margin-bottom: $spacer * 2;
+        @include media-breakpoint-up(lg){
+            margin-bottom: $spacer * 3.625;
         }
+    }
+    &-title-product{
+        font-size: $font-size-lg;
+        margin-bottom: $spacer * 0.125;
+        @include media-breakpoint-up(md){
+            font-size: $h4-font-size;
+        }
+    }
+    &-subtitle-product{
+        font-size: $font-size-base;
+        font-weight: $font-weight-light;
     }
 }
 
 // 分頁
 .pagination {
-    a{
+    .page-link{
         color: $black;
         padding: $spacer * 0.625;
+        border: 0;
         &:hover{
             text-decoration: underline;
             color: $primary;
+            background: none;
         }
     }
+}
+.page-link.active{
+    text-decoration: underline;
+    color: $primary;
 }
 // model
 .modal{
